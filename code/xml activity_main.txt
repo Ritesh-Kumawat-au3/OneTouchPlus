@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+       tools:context="com.example.android.onetouch.MainActivity"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        android:fitsSystemWindows="true"
+        />
+
+
+    <LinearLayout
+        android:background="@drawable/imageback"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ScrollView android:id="@+id/textAreaScroller"
+            android:layout_width="fill_parent"
+            android:layout_height="80dp"
+            android:scrollbars="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/locationCoordinates"/>
+                <TextView
+                    android:id="@+id/textViewLoc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAllCaps="true"
+                    android:textSize="15sp"
+                    android:textAlignment="center"
+                    android:lines="5"
+                    android:hint="Location" />
+            </LinearLayout>
+        </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="3dp"
+        >
+
+        <ImageButton
+            android:id="@+id/ambulance"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/amb"
+            android:layout_weight="1"
+            android:scaleType="centerInside"
+            android:onClick="ambulance"
+            />
+         <ImageButton
+             android:layout_weight="1"
+             android:onClick="fire"
+             android:id="@+id/fire"
+             android:src="@drawable/fire"
+             android:scaleType="centerInside"
+             android:layout_marginLeft="40dp"
+             android:layout_width="150dp"
+             android:layout_height="150dp" />
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:paddingStart="8dp"
+            android:paddingRight="8dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="4dp">
+            <Button
+                android:layout_weight="1"
+                android:id="@+id/Call_Ambulance"
+                android:onClick="Call_Ambulance"
+                android:background="?android:attr/selectableItemBackground"
+                android:drawableLeft="@drawable/callicon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Call Ambulance "/>
+            <Button
+                android:layout_weight="1"
+                android:id="@+id/Call_Fire"
+                android:onClick="Call_Fire"
+                android:background="?android:attr/selectableItemBackground"
+                android:drawableLeft="@drawable/callicon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Call Fire station"/>
+        </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="10dp"
+        >
+
+        <ImageButton
+            android:id="@+id/police"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/pppolice"
+            android:layout_weight="1"
+            android:scaleType="centerInside"
+            android:onClick="police"
+            />
+        <ImageButton
+            android:layout_weight="1"
+            android:onClick="crash"
+            android:id="@+id/crash"
+            android:src="@drawable/crash"
+            android:scaleType="centerInside"
+            android:layout_marginLeft="40dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp" />
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <Button
+                android:layout_weight="1"
+                android:id="@+id/Call_Police"
+                android:onClick="Call_Police"
+                android:background="?android:attr/selectableItemBackground"
+                android:drawableLeft="@drawable/callicon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Call Police"/>
+            <Button
+                android:layout_weight="1"
+                android:id="@+id/Call_Help"
+                android:onClick="Call_Help"
+                android:background="?android:attr/selectableItemBackground"
+                android:drawableLeft="@drawable/callicon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="call for help"/>
+        </LinearLayout>
+
+    </LinearLayout>
+   </LinearLayout>
